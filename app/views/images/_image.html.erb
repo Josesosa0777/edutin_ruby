@@ -1,10 +1,12 @@
+<!-- https://www.youtube.com/watch?v=qAKq4iIWNgk -->
 <div class="col-4">
     <figure class="figure">
     <%= image_tag image.picture.medium.url, class: 'figure-img img-fluid rounded' %>
     <!-- <img src="https://getuikit.com/v2/docs/images/placeholder_600x400.svg" class="figure-img img-fluid rounded" alt="..."> -->
     <figcaption class="figure-caption"><%= image.description %> 
-        <%= link_to 'Edit', edit_image_path(image) %> 
-        <%= link_to 'Destroy', image, method: :delete, data: {confirm: 'sure?'} %>
+        <!-- <%= link_to 'Edit', edit_image_path(image) %> -->
+        <%= link_to t('.edit_link'), edit_image_path(image) %> 
+        <%= link_to t('.remove_link'), image, method: :delete, data: {confirm: 'sure?'} %>
     </figcaption>
     </figure>
 </div>
