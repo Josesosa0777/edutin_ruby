@@ -7,6 +7,8 @@ gem 'carrierwave' #add images
 gem 'mini_magick' #images to low weight?
 # https://github.com/twbs/bootstrap-rubygem
 gem 'bootstrap', '~>4.6.0.alpha6' 
+gem 'devise'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 6.1.3', '>= 6.1.3.2'
 # Use sqlite3 as the database for Active Record
