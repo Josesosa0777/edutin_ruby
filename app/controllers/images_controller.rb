@@ -9,8 +9,10 @@ class ImagesController < ApplicationController
     def create
         # render plain: params[:image].inspect
         @image = Image.new image_params
-        @image.save
-        redirect_to @image
+        if @image.save
+            return redirect_to images_path
+        end
+        render :new
     end
     def show
     end
@@ -26,7 +28,7 @@ class ImagesController < ApplicationController
     end
     private
     def image_params
-        params.require(:image).permit(:description)
+        params.require(:image).permit :description, :picture
     end
     def set_image
         @image = Image.find params[:id]
